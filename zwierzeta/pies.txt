@@ -6,7 +6,7 @@ Pięć i sześć, pięć i sześć,
 Wcale lodów nie chciał jeść.
 Siedem, osiem, siedem, osiem,
 Wciąż o kości tylko prosił.
-Dziewięć, dziesięć, dziewięć, dziesięć,
+Dziewięć, 10, dziewięć, 10,
 Kto znas kości mu przyniesie?
 Może ja? może ty?
 Licz od nowa raz, dwa, trzy ...
