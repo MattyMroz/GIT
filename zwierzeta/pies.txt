@@ -1,4 +1,4 @@
-1, 2, 1, 2
+Jeden, dwa, jeden, dwa
 Pewna pani miała pasa
 3, 4, 3, 4
 Pies ten dziwne miał maniery.
