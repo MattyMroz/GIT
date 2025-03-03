@@ -1,0 +1,29 @@
+• git init - to polecenie zamienia aktualny katalog w repozytorium Gita
+• git clone <link> - robiąc lokalną kopię repozytorium zdalnego
+
+
+.git\config
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[user]
+	name = MattyMroz
+	email = mateuszmroz001@gmail.com
+
+
+
+• git status - sprawdzenie w jakim stanie znajdują się pliki (widać, które zostały zmienione,
+które zostały dodane do stage’a, które zostały usunięte)
+- by wyświetlić plik w podfolderach, należy dopisać `--recursive` przy poleceniu `git status`
+• git add <nazwaPliku> - dodanie do stage’a zmian w danym pliku
+• git add . - dodanie do stage’a wszystkich zmian w danym katalogu i katalogach poniżej
+• git rm <nazwaPliku> - dodanie do stage’a usunięcia pliku
+• git commit -m "<komentarz>" - wkomitownie zmian ze stage’a
+• git diff --staged - wyświetlenie różnic dodanych do stage’a w stosunku do aktualnego komita.
+• git diff - wyświetlenie różnic nie dodanych do stage’a w stosunku do aktualnego komita.
+• git push - wypchnięcie zmian do repozytorium zdalnego
+• git pull - pobranie zmian z repozytorium zdalnego
