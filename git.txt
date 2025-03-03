@@ -27,3 +27,14 @@ które zostały dodane do stage’a, które zostały usunięte)
 • git diff - wyświetlenie różnic nie dodanych do stage’a w stosunku do aktualnego komita.
 • git push - wypchnięcie zmian do repozytorium zdalnego
 • git pull - pobranie zmian z repozytorium zdalnego
+
+
+• git branch <nazwaGałęzi> - tworzy gałąź o podanej nazwie
+• git checkout <nazwaGałęzi> - przełącza na gałąź/komit o podanej nazwie/hashu
+
+
+• git merge --no-ff <nazwaGałęzi> - scala zmiany z gałęzi nazwaGałęzi. Najczęściej wykorzystywane do scalenia gałęzi z gałęzią master. Wykonywane na gałęzi master.
+• git rebase <nazwaGałęzi> - przenosi daną gałąź na szczyt gałęzi nazwaGałęzi. Najczęściej
+wykorzystywane do przeniesienie gałęzi na szczyt gałęzi master (git rebase master ). Wykonywane na gałęzi nazwaGałęzi.
+
+
