@@ -1,0 +1,169 @@
+# Sprawozdanie z laboratorium GitHub - Dział I: Dodanie gitignore i praca na gałęziach
+
+## Punkt 1: Dodanie pliku .gitignore
+Dodano plik .gitignore do repozytorium, który zabezpiecza projekt przed nieumyślnym dodaniem niepożądanych plików i folderów generowanych automatycznie przez narzędzia i IDE (np. bin, target, .idea). Wprowadzono zmiany do repozytorium lokalnego za pomocą poleceń git add i git commit z odpowiednim opisem.
+
+[Miejsce na zrzut ekranu z wykonania polecenia]
+
+touch .gitignore
+# Edycja pliku .gitignore i dodanie odpowiedniej zawartości
+git add .gitignore
+git commit -m "1. Dodanie pliku gitignore"
+
+## Punkt 2: Poprawa formatowania kodu
+Poprawiono błędy związane z formatowaniem kodu źródłowego Java w klasie HanoiRhymer. Użyto klawisza tab oraz kombinacji shift+tab do regulacji wcięć w kodzie. Wprowadzono zmiany do repozytorium lokalnego, a następnie do repozytorium zdalnego za pomocą polecenia git push.
+
+[Miejsce na zrzut ekranu z wykonania polecenia]
+
+# Edycja pliku HanoiRhymer.java i poprawa formatowania
+git add src/main/java/edu/kis/vh/nursery/HanoiRhymer.java
+git commit -m "2. Poprawa formatowania kodu w klasie HanoiRhymer"
+git push origin master
+
+## Punkt 3: Praca z gałęzią format
+Na platformie GitHub przełączono się na gałąź format i wyświetlono listę commitów.
+
+**Odpowiedź na pytanie:** Ostatni commit w gałęzi format nazywał się [wpisz nazwę commita]. W tym commicie usunięto następujące linie: [wpisz numery linii].
+
+[Miejsce na zrzut ekranu z listy commitów]
+
+Porównano plik HanoiRhymer.java w gałęzi master i format za pomocą polecenia git diff origin/format *Hanoi*. Następnie poprawiono wszystkie różnice w pliku HanoiRhymer.java.
+
+[Miejsce na zrzut ekranu z porównania plików]
+
+Przełączono się na gałąź master i scalono zmiany z gałęzi format do gałęzi master przy użyciu poleceń git merge --squash i git commit. Sprawdzono, czy wszystkie błędy formatowania zostały usunięte we wszystkich klasach, uruchamiając automatyczne formatowanie.
+
+**Odpowiedź na pytanie dotyczące kombinacji klawiszy alt + ← oraz alt + →:** [Wpisz odpowiedź]
+
+[Miejsce na zrzut ekranu z wykonania polecenia merge]
+
+
+# Na platformie GitHub przełączenie się na gałąź format i sprawdzenie commitów
+
+# W terminalu porównanie plików
+git diff origin/format *Hanoi*
+
+# Jeśli są różnice, ponowna edycja pliku HanoiRhymer.java
+
+# Scalanie zmian z gałęzi format
+git checkout master
+git merge --squash format
+git commit -m "3. Scalenie zmian z gałęzi format dotyczących formatowania kodu"
+
+# Sprawdzenie formatowania we wszystkich klasach
+# Uruchomienie automatycznego formatowania w IDE
+
+## Punkt 4: Konwencja nazewnicza klas i metod
+Utworzono gałąź class-method-naming i przełączono się na nią. Na tej gałęzi poprawiono błędy konwencji nazewniczej klas i metod kodu źródłowego Java we wszystkich klasach. Wykonano osobne commity dla zmian nazw klas i osobne dla zmian nazw metod. Do refaktoryzacji użyto opcji Refactor → Rename.
+
+[Miejsce na zrzut ekranu z wykonania poleceń]
+
+git branch class-method-naming
+git checkout class-method-naming
+
+# Refaktoryzacja nazw klas
+# Użycie opcji Refactor → Rename w IDE
+git add .
+git commit -m "4.1 Poprawa nazw klas zgodnie z konwencją Java"
+
+# Refaktoryzacja nazw metod
+# Użycie opcji Refactor → Rename w IDE
+git add .
+git commit -m "4.2 Zmiana konwencji nazewniczej metod"
+
+## Punkt 5: Konwencja nazewnicza pól klas
+Przełączono się na gałąź master i utworzono gałąź fields-naming. Na tej gałęzi poprawiono błędy konwencji nazewniczej pól klas we wszystkich klasach i wykonano commit.
+
+[Miejsce na zrzut ekranu z wykonania poleceń]
+
+Przełączono się na gałąź master i scalono zmiany z gałęzi fields-naming do gałęzi master przy użyciu polecenia git merge --ff-only.
+
+[Miejsce na zrzut ekranu z wykonania polecenia merge]
+
+Przełączono się na gałąź class-method-naming i użyto polecenia git rebase, aby przenieść ją na szczyt gałęzi master. Następnie przełączono się na gałąź master i scalono zmiany z gałęzi class-method-naming do gałęzi master przy użyciu polecenia git merge --no-ff.
+
+[Miejsce na zrzut ekranu z grafu commitów]
+
+**Odpowiedź na pytanie dotyczące różnicy działania opcji polecenia merge:**
+[Wpisz wyjaśnienie różnic między opcjami merge: --squash, --ff-only, --no-ff]
+
+**Wyjaśnienie zachowania polecenia rebase:**
+[Wpisz wyjaśnienie działania polecenia rebase]
+
+[Miejsce na zrzuty ekranu z narzędzia https://git-school.github.io/visualizing-git/ ilustrujące odpowiedź]
+
+
+
+git checkout master
+git branch fields-naming
+git checkout fields-naming
+
+# Refaktoryzacja nazw pól klas
+# Użycie opcji Refactor → Rename w IDE
+git add .
+git commit -m "5. Poprawa konwencji nazewniczej pól klas"
+
+# Scalanie zmian z gałęzi fields-naming
+git checkout master
+git merge --ff-only fields-naming
+
+# Przeniesienie gałęzi class-method-naming na szczyt master
+git checkout class-method-naming
+git rebase master
+
+# Scalanie zmian z gałęzi class-method-naming
+git checkout master
+git merge --no-ff class-method-naming
+
+# Wysłanie wszystkich zmian do repozytorium zdalnego
+git push origin master
+git push origin fields-naming
+git push origin class-method-naming
+
+
+
+1. Merge z opcją --squash
+
+Przed:
+A---B---C (master)
+     \
+      D---E (feature)
+
+Po:
+A---B---C---F (master) [F zawiera zmiany z D i E jako jeden commit]
+     \
+      D---E (feature)
+
+2. Merge z opcją --ff-only
+
+Przed:
+A---B---C (master)
+         \
+          D (feature)
+
+Po:
+A---B---C---D (master, feature)
+
+3. Merge z opcją --no-ff
+
+Przed:
+A---B---C (master)
+         \
+          D (feature)
+
+Po:
+A---B---C-------E (master)
+         \     /
+          D---/ (feature)
+
+4. Rebase
+
+Przed:
+A---B---C (master)
+     \
+      D---E (feature)
+
+Po:
+A---B---C (master)
+         \
+          D'---E' (feature)
