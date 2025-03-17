@@ -1,0 +1,92 @@
+Oto sprawozdanie z wykonania Działu II:
+
+# Sprawozdanie z laboratorium GitHub - Dział II: Praca w podejściu feature branch
+
+## Konfiguracja repozytorium
+
+1. Skonfigurowano ochronę gałęzi master:
+- Settings -> Branches -> Add branch protection rule
+- Włączono "Require pull request before merging" oraz "Require approvals"
+{zdjęcie ustawień ochrony gałęzi}
+
+2. Skonfigurowano opcje Pull Request:
+- Settings -> General -> Pull Request
+- Pozostawiono włączoną tylko opcję "Allow merge commits"
+{zdjęcie ustawień Pull Request}
+
+## Przygotowanie pracy zespołowej
+
+1. Dodano współpracowników do repozytorium:
+```bash
+# Settings -> Collaborators -> Add people
+# Dodano collaboratora i prowadzącego
+```
+{zdjęcie listy współpracowników}
+
+2. Utworzono Issue:
+- Włączono opcję Issues w ustawieniach repozytorium
+- Utworzono nowe Issue z treścią dotyczącą stałych i annotacji
+- Przypisano collaboratora jako wykonawcę
+{zdjęcie utworzonego Issue}
+
+## Zadania równoległe do pracy zespołowej
+
+1. Utworzono nową gałąź dla tematu "Accessory i hermetyzacja":
+```bash
+git checkout -b accessory-encapsulation
+```
+
+2. Wykonano zmiany w kodzie:
+- Przeanalizowano i zmieniono modyfikatory dostępu
+- Wygenerowano getter dla pola total w DefaultCountingOutRhymer
+- Przeprowadzono hermetyzację nieprywatnych atrybutów
+- Usunięto nieużywane settery
+
+3. Wprowadzono zmiany do repozytorium:
+```bash
+git add .
+git commit -m "9-12. Implementacja hermetyzacji i modyfikatorów dostępu"
+git push origin accessory-encapsulation
+```
+
+4. Utworzono Pull Request:
+- Utworzono PR z gałęzi accessory-encapsulation do master
+- Sprawdzono zmiany
+- Zatwierdzono i scalono zmiany
+{zdjęcie Pull Request}
+
+## Praca jako Collaborator
+
+1. Sklonowano repozytorium i utworzono gałąź:
+```bash
+git clone [URL_repozytorium]
+git checkout -b constants
+```
+
+2. Wprowadzono zmiany w kodzie:
+- Zastąpiono literały stałymi
+- Dodano modyfikator final
+- Dodano annotacje @Override
+
+3. Wysłano zmiany:
+```bash
+git add .
+git commit -m "6-8. Implementacja stałych i annotacji"
+git push origin constants
+```
+
+4. Utworzono Pull Request:
+- Wybrano base: master, compare: constants
+- Dodano właściciela jako recenzenta
+- Powiązano PR z Issue
+{zdjęcie Pull Request}
+
+## Review procesu
+
+1. Wykonano test "Github - PR checkpoint" na WIKAMP
+2. Przeanalizowano feedback z testu
+3. Dokonano przeglądu kodu i wprowadzono sugerowane poprawki
+4. Zatwierdzono ostateczne zmiany
+{zdjęcie końcowego stanu repozytorium}
+
+W miejscach oznaczonych {zdjęcie} należy wstawić odpowiednie zrzuty ekranu dokumentujące wykonane działania.
